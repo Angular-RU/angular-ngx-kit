@@ -27,41 +27,24 @@ Ngx-kit - это не классическая либа компонентов, 
 
 ## Минимальные требования
 
-* Angular ^5.0.0
-* Angular-cli ^1.5.0
+* Angular ^6.0.0
+* Angular-cli ^6.0.0
 
 
 ## Руководство:
 
 [<img src="https://habrastorage.org/webt/9l/iw/vc/9liwvcbgmipvnird_12blxfohoy.png" align="center">](https://github.com/ngx-kit)
 
-На видео показана быстрая установка пакетов, генерация кода дейт-пикера и его кастомизация.
+На демке показана быстрая установка пакетов, генерация кода дейт-пикера и его кастомизация:
 
-* [Демо-ролик](https://www.youtube.com/watch?v=th9fhD1e3d4)
-* [Код из демо-ролика (stackblitz)](https://stackblitz.com/edit/ngx-kit-date-picker-demo)
-
+![](https://ngx-kit.com/assets/demo.gif)
 
 ## Использование
 
 #### Установка пакетов
 
 ```
-npm i @ngx-kit/core --save
-npm i @ngx-kit/collection @angular-devkit/core --save-dev
-```
-
-#### Импорт модулей
-
-```typescript
-import { KitRootModule, KitModule, KitPlatformBrowserModule } from '@ngx-kit/core';
-
-@NgModule({
-  ...
-  imports: [
-    ...
-    KitRootModule,
-    KitModule,
-    KitPlatformBrowserModule,
+ng add @ngx-kit/core
 ```
 
 #### Генерация кода с помощью Angular CLI
@@ -69,7 +52,7 @@ import { KitRootModule, KitModule, KitPlatformBrowserModule } from '@ngx-kit/cor
 Пример генерации модуля для кнопки:
 
 ```
-ng g ui-button -c=@ngx-kit/collection my-button
+ng g @ngx-kit/collection:ui-button my-button
 ```
 
 В данном примере я использвал итоговое имя `my-button`, но оно может быть любым на ваше усмотрение. Что позволяет один и тот же шаблон генерировать несколько раз в рамках одного проекта и модифицировать его под разные нужды.
